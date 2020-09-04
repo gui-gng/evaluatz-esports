@@ -15,6 +15,7 @@ function Header (){
   useEffect(() => {
     if (cookies && cookies.get(USER_INFO, cookies_options)) {
       setUser(cookies.get(USER_INFO, cookies_options) || null);
+      console.log(user);
       setIsLogged(true);
     }
   });
@@ -28,7 +29,7 @@ function Header (){
         </div>
         <div className="evaluatz_header_right d-flex align-items-center justify-content-between">
           {isLogged ?
-          <div className="evaluatz_signin_btn"  >{user}</div>:
+          <div className="evaluatz_signin_btn"  >USER</div>:
           <a href="https://accounts.evaluatz.com/auth/login?source=esports">
             <div className="evaluatz_signin_btn" >Sign Up</div> 
           </a>
