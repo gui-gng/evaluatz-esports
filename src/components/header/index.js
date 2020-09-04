@@ -15,6 +15,7 @@ function Header (){
   useEffect(() => {
     if (cookies && cookies.get(USER_INFO, cookies_options)) {
       setUser(cookies.get(USER_INFO, cookies_options) || null);
+      setIsLogged(true);
     }
   });
 
