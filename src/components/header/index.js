@@ -14,7 +14,7 @@ function Header (){
   const [user, setUser] = useState(null);
   useEffect(() => {
     if (cookies && cookies.get(USER_INFO, cookies_options)) {
-      setUser(cookies.get(USER_INFO, cookies_options) || null);
+      setUser(cookies.get(USER_INFO, cookies_options));
       // console.log(user);
       setIsLogged(true);
     }
@@ -32,9 +32,7 @@ function Header (){
           <div className="evaluatz_signin_btn"  >{user.username}</div>:
           <a href="https://accounts.evaluatz.com/auth/login?source=esports">
             <div className="evaluatz_signin_btn" >Sign Up</div> 
-          </a>
-           
-            
+          </a> 
           }
 
         </div>
